@@ -1,1 +1,2 @@
 Hi
+Hi times 2
