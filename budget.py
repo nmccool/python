@@ -10,7 +10,12 @@ ASSIGNMENT REQUIREMENTS
 [x] 6. Output formatted to 2 decimal places (:,.2f or :.2%).
 -----------------------------------------------------------------------
 """
-# --- 1. ASSIGNMENT 3A "The Personal Budget" ---
+# --- 1. ASSIGNMENT 3A: Number Formatting and Math
+# --- 1. Date: 2026-02-02
+# --- 1. File Name: budget.py
+
+# --- "The Personal Budget" ---
+ 
 # --- 2. GET INPUT ---
 gross_pay = float(input("Enter your Monthly Income: $"))
 
@@ -22,7 +27,7 @@ expense4 = float(input("Enter Gasoline amount: $"))
 expense5 = float(input("Enter Groceries amount: $"))
 
 # --- 4. CALCULATE TOTAL EXPENSES AND REMAINING BALANCE ---
-total_expenses = expense1+expense2+expense3+expense4+expense5
+total_expenses = expense1 + expense2 + expense3 + expense4 + expense5
 remaining_balance = gross_pay-total_expenses
 remaining_balance_percentage = remaining_balance/gross_pay
 
