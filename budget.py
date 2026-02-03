@@ -37,4 +37,3 @@ print(f"Total Expenses = ${total_expenses:,.2f}")
 print(f"Percentage Spent = {percentage_spent:,.2%}")
 print(f"Remaining Balance = ${remaining_balance:,.2f}")
 print(f"Percentage Remaining = {remaining_balance_percentage:,.2%}")
-
