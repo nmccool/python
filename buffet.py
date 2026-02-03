@@ -35,7 +35,7 @@ if age < 1:
     print(f"Your meal is FREE! ${price_group_1:.2f}")
 elif age < 12:
     # This block runs if age is between 1 and 11
-    print(f"Your meal is ${price_group_2:.2f}")
+    print(f"Your meal is ${price_group_2:.2f} (Child Rate)")
 elif age <= 64:
     # This block runs if age is between 12 and 64
     print(f"Your meal is ${price_group_3:.2f} (Standard Adult)")
