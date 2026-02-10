@@ -28,11 +28,11 @@ expense5 = float(input("Enter Groceries amount: $"))
 
 # --- 4. CALCULATE TOTAL EXPENSES AND REMAINING BALANCE ---
 total_expenses = expense1 + expense2 + expense3 + expense4 + expense5
-remaining_balance = gross_pay-total_expenses
-remaining_balance_percentage = remaining_balance/gross_pay
+remaining_balance = gross_pay - total_expenses
+remaining_balance_percentage = remaining_balance / gross_pay
 
 # --- 5. CALCULATE PERCENTAGE OF INCOME SPENT ---
-percentage_spent = total_expenses/gross_pay   
+percentage_spent = total_expenses / gross_pay   
 
 # --- 6. OUTPUT RESULTS ---
 print(f"\n\n")
