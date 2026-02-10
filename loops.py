@@ -25,5 +25,5 @@ while driving:
 # Task 2: For Loop (99 Bottles of Beer)
 for i in range(99,-1,-1):
     print (f"{i} bottles of beer on the wall, {i} bottles of beer.")
-# Printed message ones loop ends
+# Printed message once loop ends
 print (f"I'm drunk!")
