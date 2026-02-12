@@ -36,18 +36,20 @@ if age >= 21:
 # 5a. GATE 1 (AND)
     if age >= 21 and has_id == "yes":
         print(f"\nOK, let's see it.")
-
+    if has_id == "no":
+        is_vip = "no";
+        print(f"\nSorry.  Can't get in to Club SQL without ID.") 
+    
 # 4. --- IS USER VIP? ---
-        is_vip = (input(f"\nAre you on the 'VIP List'? (yes/no): "));
-    else:
-        print(f"\nSorry.  Can't get in to Club SQL without ID.")        
-
+    if age >= 21 and has_id == "yes":
+        is_vip = (input(f"\nOK. Are you on the 'VIP List'? (yes/no): "))
+        if is_vip == "yes":
+            print(f"\nWelcome to Club SQL. You may proceed to the VIP area.");
+        
 # 5b. GATE 2 (OR)
-    if age >= 21 and has_id == "yes" and is_vip == "yes":
-        print(f"\nWelcome to Club SQL. You may proceed to the VIP area.");
-    elif age >= 21 and has_id == "yes" or is_vip == "no":
-        print(f"\nOK. You may enter Club SQL.");
-
+        elif age >= 21 and has_id == "yes" or is_vip == "no":
+            print(f"\nThat's ok, you may enter Club SQL."); 
+        
 # 5c. GATE 3 (NOT)
 if not age >= 21:
     has_id = "no";
