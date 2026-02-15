@@ -10,10 +10,11 @@ ASSIGNMENT 5A: INPUT VALIDATION
 """
 
 # --- REGISTRATION FORM ---
+print("-" * 40)
 
 # 2.  INPUT FIELDS USING 'WHILE' LOOP VALIDATION
-print("-" * 40)
-# 2a.  Validate First Name (Cannot be blank)
+
+# --- Validate First and Last Name (Cannot be blank) ---
 first_name = input("Enter First Name: ")
 while first_name == "":
     print("❌ Error: First name cannot be blank.")
@@ -23,13 +24,13 @@ while last_name == "":
     print("❌ Error: Last name cannot be blank.")
     last_name = input("Please Enter Your Last Name: ")
 
-# 2b. Validate Chaperone Status (Must be Y or N)
+# 3. Validate Chaperone Status (Must be Y or N)
 chaperone = input("Parent volunteering to chaperone? (Y/N): ").upper()
 while chaperone != "Y" and chaperone != "N":
     print("❌ Error: Please enter only Y or N.")
     chaperone = input("Parent volunteering to chaperone? (Y/N): ").upper()
 
-# 2c. Validate Phone Number (Cannot be blank)
+# --- Validate Phone Number (Cannot be blank) ---
 phone_number = input("Enter 10-digit phone number (e.g. 312-555-1234): ")
 while len (phone_number) < 12:
         print("❌ Error: Phone number must be 10-digits in 312-555-1234 format")
@@ -37,7 +38,7 @@ while len (phone_number) < 12:
 
 print(f"\n✅ Registration Complete for {first_name} {last_name}!\n")
 
-# 2d. Validate Ticket Count (Must be Integer)
+# --- Validate Ticket Count (Must be Integer) ---
 tickets = 0
 while True:
     try:
@@ -50,3 +51,5 @@ while True:
 
 print(f"✅ {first_name} {last_name} ordered {tickets} tickets.")
 print("-" * 40)
+
+# 4 --- Screenshot uploaded in assignment comments. ----
