@@ -25,7 +25,7 @@ print("Welcome to the Bank of McCool ATM")
 balance = float(1000.00)
 
 while True:
-    print("\n --- Menu ---")
+    print("\n--- Menu ---")
     print("1. Show Account Balance")
     print("2. Make A Deposit")
     print("3. Make A Withdrawal")
