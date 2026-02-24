@@ -44,6 +44,7 @@ while True:
         else:
             print("\nSorry. That seat is taken or doesn't exist. Please make another selection.")
     else:
-        print(f"\nInvalid. Please enter a valid number.")
+        print(f"\nInvalid entry. Please enter a valid number.")
 
 print("-" * 40)
+
