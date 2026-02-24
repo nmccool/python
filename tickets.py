@@ -20,27 +20,31 @@ print("\nWelcome to McCool's Theatre!")
 print("Tonight we're going back in time to bring you...") 
 print("Back To The Future!\n")
 
-# ---Seat List ---
+# --- Seat List ---
 seats = list(range(1, 21))
 
+# --- While Loop ---
 while True:
-
+# --- No seats logic break ---
     if not seats:
         print(f"\nSorry. This showing is sold out!")
         break
 
     print("Available Seats:", seats)
 
+# --- User Input and validation ---
     user_selection = input(f"\nSelect a seat number or enter '0' to Quit: ")
     if user_selection.isdigit():
         selection = int(user_selection) 
-
+# --- User exit ---
         if selection == 0:
             print(f"\nThanks for stopping by!")
             break
+ # --- Seat removal ---       
         elif selection in seats:
             seats.remove(selection)
             print("\nYour seat has been reserved!")    
+ # --- Error response ---
         else:
             print("\nSorry. That seat is taken or doesn't exist. Please make another selection.")
     else:
