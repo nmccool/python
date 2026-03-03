@@ -97,7 +97,7 @@ for char in name_string:
 # Hint: You'll need one more .join() and one more print block here!
 
 # --- Finale ---
-all_ducks = "-".join(duck_letters)
+all_ducks = " ".join(duck_letters)
 
 print(f"There was a teacher who had a duck and Ducky was his Name-o")
 print((f"({all_ducks})\n") * 3)
