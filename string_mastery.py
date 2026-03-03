@@ -81,7 +81,7 @@ print("\n--- Singing the Duck Song! ---")
 
 for char in name_string:
 # 1. --- Join ---
-    current_name = "-".join(duck_letters)
+    current_name = " ".join(duck_letters)
 # 2. --- Print ---
     print(f"There was a teacher who had a duck and Ducky was his Name-o")
 # 3. --- Print * 3 ---
