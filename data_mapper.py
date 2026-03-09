@@ -24,12 +24,13 @@ NATO_ALPHABET = {
     "Y": "Yankee", "Z": "Zulu"}
 
 print("-" * 50)
-# --- Added strip function as precaution ---
+# 3. --- Added strip function as precaution ---
 word = input("Enter word to spell: ").strip().upper()
 
 # TODO: Loop through each character
 # TODO: try to print the NATO code, except if character is missing
 
+# 4 and 5 --- Loop and Try/Except ---
 for letter in word:
     try:
         print(NATO_ALPHABET[letter])
