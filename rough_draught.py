@@ -1,8 +1,11 @@
 """
 ASSIGNMENT 9B: SPRINT 2 - FUNCTIONAL STUBS
-Project: Rough Draught (V1.0)
+Project: Rough Draught v1.0
 Developer: Neal McCool
+Date: 2026-03-16
 """
+
+# ---I'm basically reverse engineering Monty's Code Stub to fit my 
 
 # GLOBAL CONSTANTS (Pantry Rules)
 BEER_LOG = "beer_log.txt"
