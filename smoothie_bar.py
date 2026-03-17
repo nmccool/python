@@ -30,14 +30,12 @@ def get_price(size):
     else:
         return 0.00
 
-
 def blend(size, base, fruit, scoops):
     print("-" * 50)
     print("--- Smoothie Order ---")
     print(f"Size: {size}")
     print(f"Base: {base}")
     print(f"Fruit: {fruit} x ({scoops} scoops)")
-
 
 def main():
     print("-" * 50)
