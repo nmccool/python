@@ -17,26 +17,19 @@ Date: 2026-03-16
 # GLOBAL CONSTANTS (The Pantry)
 BASES = ("Water", "Apple Juice", "Orange Juice", "Milk")
 FRUITS = ("Strawberry", "Banana", "Mango", "Blueberry")
-SIZE_PRICE = {
-    "S": ("Small", 3.00),
-    "SM": ("Small", 3.00),
-    "SMALL": ("Small", 3.00),
-
-    "M": ("Medium", 4.00),
-    "MD": ("Medium", 4.00),
-    "MED": ("Medium", 4.00),
-    "MEDIUM": ("Medium", 4.00),
-
-    "L": ("Large", 5.00),
-    "LG": ("Large", 5.00),
-    "LAR": ("Large", 5.00),
-    "LARGE": ("Large", 5.00)
-}
-print("-" * 50)
 
 
 def get_price(size):
-    return SIZE_PRICE.get(size, (None, 0.00))
+
+    if size in ("SMALL", "SM", "S"):
+        return 3.00
+    elif size in ("MEDIUM", "MD", "M", "MED"):
+        return 4.00
+    elif size in ("LARGE", "LG", "L", "LAR"):
+        return 5.00
+    else:
+        return 0.00
+
 
 def blend(size, base, fruit, scoops):
     print("-" * 50)
@@ -47,25 +40,27 @@ def blend(size, base, fruit, scoops):
 
 
 def main():
+    print("-" * 50)
     print("Welcome to McCool's Smoothie Bar!")
 
     while True:
         choose_size = input("What size would you like? (Small, Medium, or Large): ").upper().strip()
-        if choose_size in SIZE_PRICE:
-            print(f"{choose_size} = ${get_price(choose_size)[1]:.2f}")
+        if choose_size in ("SMALL", "MEDIUM", "LARGE", "SM", "MD", "LG", "S", "M", "L", "MED", "LAR"):
+            price = get_price(choose_size)
+            print(f"Price for this size = ${price:.2f}")
             break
         else:
             print("Invalid size entry. Please choose a size.")
 
     while True:
         choose_base = input("Select Base: (Water, Apple Juice, Orange Juice, or Milk) ").title().strip()
-        if choose_base in ("Water", "Apple Juice", "Apple", "Orange Juice", "Orange", "Milk"):
+        if choose_base in BASES:
             break
         else:
             print("Invalid entry. Please select a base.")
 
     while True:
-        choose_fruit = input("Select Fruit: Strawberry, Banana, Mango, or Blueberry: ").title().strip()
+        choose_fruit = input("Select Fruit: (Strawberry, Banana, Mango, or Blueberry) ").title().strip()
         if choose_fruit in FRUITS:
             break
         else:
@@ -80,11 +75,12 @@ def main():
         choose_scoops = 0
         scoop_cost = 0.00
 
-    total = get_price(choose_size)[1] + (choose_scoops * 1.00)
-    
+    total = get_price(choose_size) + scoop_cost
+
     blend(choose_size, choose_base, choose_fruit, choose_scoops)
 
     print(f"Total: ${total:.2f}")
+    print("-" * 50)
+
 
 main()
-print("-" * 50)
