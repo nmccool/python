@@ -5,9 +5,9 @@ Developer: Neal McCool
 Date: 2026-03-16
 """
 
-# ---I'm basically reverse engineering Monty's Code Stub to fit my 
+# ---I reverse engineered Monty's Code Stub for my own project--- 
 
-# GLOBAL CONSTANTS (Pantry Rules)
+# GLOBAL CONSTANTS (Brewery Rules)
 BEER_LOG = "beer_log.txt"
 
 def get_user_info():
@@ -34,7 +34,7 @@ def collect_beer_data():
     }
 
 def calculate_rating(beer_entry):
-    """Calculates rating summary based on stars awarded and 'buy again?'."""
+    """Calculates rating summary based on stars awarded and 'buy again?' status."""
     # TODO: Load ratings from beer_log.txt
     return "Top Shelf!"
 
