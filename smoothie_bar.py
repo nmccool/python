@@ -69,7 +69,7 @@ def main():
         scoop_cost = choose_scoops * 1.00
         print(f"{choose_scoops} scoops = ${scoop_cost:.2f}")
     except ValueError:
-        print("Invalid entry. Defaulting to 0.")
+        print("Invalid entry. 0 scoops added.")
         choose_scoops = 0
         scoop_cost = 0.00
 
