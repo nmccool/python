@@ -14,12 +14,12 @@ DATE: 2026-03-30
 
 """
 #2 --- GLOBAL CONSTANT(S) ---
-SIZES= ("Small", "Medium", "Large", "XL")
+SIZES = ("Small", "Medium", "Large", "XL")
 CRUSTS = ("Thin", "Hand Tossed", "Deep Dish")
 TOPPINGS = ("Pepperoni", "Sausage", "Chicken", "Bacon", "Mushrooms", "Olives", "Green Peppers", "Pineapple")
 
 #3&4 --- 4 parameters and a default)
-def make_pizza (size, crust, topping, is_delivery=False):
+def make_pizza(size, crust, topping, is_delivery=False):
 
     size = size.strip().title()
     crust = crust.strip().title()
@@ -34,13 +34,13 @@ def make_pizza (size, crust, topping, is_delivery=False):
     else:
         print("*** Carry Out ***")
 
-#5 --- Main displays Global Pantry ---
-
 def main():
     print("-" * 50)
     print("Welcome to McCool's Pizzeria")
     print("-" * 50)
 
+#5 --- Main displays Global Pantry ---
+    # --- SIZE ---
     print("What size pizza would you like?") 
     while True:
         size = input(" | ".join (SIZES)+": ").strip().title()
@@ -48,6 +48,8 @@ def main():
             break
         else:
             print("Invalid selection. Please choose a size.")
+
+    # --- CRUST ---
     print("\nWhat type of crust would you like?")
     while True:
         crust = input(" | ".join (CRUSTS)+": ").strip().title()
@@ -55,6 +57,8 @@ def main():
             break
         else:
             print("Invalid selection. Please choose a crust.")
+
+    # --- TOPPING ---
     print("\nWhat topping would you like?")        
     while True:
         topping = input(" | ".join (TOPPINGS)+": ").strip().title()
@@ -62,6 +66,8 @@ def main():
             break
         else:
             print("Invalid selection.  Please choose a topping.")
+
+    # --- DELIVERY ---
     is_delivery = input("\nWould like delivery? (yes/no) ").strip().lower() == "yes"
 
 #6 --- KEYWORD ARGUMENTS ---
