@@ -20,6 +20,13 @@ TOPPINGS = ("Pepperoni", "Sausage", "Chicken", "Bacon", "Mushrooms", "Olives", "
 
 #3&4 --- 4 parameters and a default)
 def make_pizza(size, crust, topping, is_delivery=False):
+     """
+    Shows customer's pizza order data based on their selections.
+    :param size: The size of the pizza (Small, Medium, Large, XL)
+    :param crust: The type of crust
+    :param topping: The topping selected
+    :param is_delivery: Boolean value, delivery (True) or carry out (False)
+    """
 
     size = size.strip().title()
     crust = crust.strip().title()
