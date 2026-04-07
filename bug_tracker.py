@@ -10,6 +10,7 @@ ASSIGNMENT 11A REVISED: THE BUG TRACKING LOG
 -----------------------------------------------------------------------
 """
 import datetime
+bug_id = 1
 
 #1 --- While loop ---
 while True:
@@ -20,7 +21,11 @@ while True:
         file_name = input("File Name: ")
         bug_description = input("Bug Description: ")
         priority = input("Priority Level (High, Med, Low): ").strip().title()
+
+#2 --- Datetime module ---        
         current_time = datetime.datetime.now()
+
+#3 --- Store Datetime ---
         timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
     
 
@@ -28,15 +33,20 @@ while True:
             timestamp: [file_name, bug_description, priority]
     }
         log_entry = "*" * 50 + "\n"
+        log_entry += f"BUG SUBMISSION {bug_id}\n"
         log_entry += f"Timestamp: {timestamp}\n"
         log_entry += f"File: {file_name}\n"
         log_entry += f"Description: {bug_description}\n"
         log_entry += f"Priority: {priority}\n"
         log_entry += "*" * 50 + "\n"
         log_entry += "\n"
-        
+
+#4&5 --- With open and bug_log ---         
         with open("bug_log.txt", "a") as file:
             file.write(log_entry)
+
+# ---  Added bug counter ---             
+        bug_id += 1
             
         
         print("Bug recorded.")
