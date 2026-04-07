@@ -9,7 +9,7 @@ ASSIGNMENT 11A: THE OFFICE HERO DASHBOARD
 [X] 5. main() calls function using KEYWORD ARGUMENTS.
 [X] 6. main() correctly unpacks and prints both return values.
 -----------------------------------------------------------------------
-NAME: Bill Carson
+NAME: Neal McCool
 DATE: 2026-04-06
 """
 #2 --- Global Constants ---

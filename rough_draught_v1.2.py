@@ -1,8 +1,8 @@
 """
 ASSIGNMENT 9B: SPRINT 3 - REVIEW BOARD
-Project: Rough Draught v1.1
+Project: Rough Draught v1.2
 Developer: Neal McCool
-Date: 2026-03-30
+Date: 2026-04-06
 """
 # --- Updated for Sprint 4 ---
 import datetime
