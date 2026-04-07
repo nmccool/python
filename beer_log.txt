@@ -1,0 +1,15 @@
+**************************************************
+BEER ENTRY 1
+Timestamp: 2026-04-07 01:00:38
+User: Neal
+Location: Woodstock, Il
+Beer: Beer For Dealing With Your Family
+Brewery: Off Color Brewing
+Price: $19.99
+ABV: 12.0%
+Style: None
+Strength: None
+Country: None
+Rating: 3
+**************************************************
+

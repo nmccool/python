@@ -4,6 +4,7 @@ Project: Rough Draught v1.1
 Developer: Neal McCool
 Date: 2026-03-30
 """
+# --- Updated for Sprint 4 ---
 import datetime
 entry_id = 1
 
@@ -25,6 +26,7 @@ def get_user_info():
     location = input("Enter your City, State: ").strip().title()
     return name, location
 
+""" TODO still need to add crash prevention to all inputs"""
 def collect_beer_data(rating=0):
     """Collects beer entry data."""
     
@@ -71,17 +73,47 @@ def calculate_rating(beer_entry):
 
 # --- Saving data
 def save_data_and_label(name, location, beer_entry, rating_result):
-
     """Prints the beer entry summary."""
-
+    global entry_id
     print("\n--- ROUGH DRAUGHT ENTRY ---")
     print(f"User: {name}")
     print(f"Location: {location}")
     print(f"Beer: {beer_entry['beer_name']}")
     print(f"Brewery: {beer_entry['brewery']}")
     print(f"Price: ${beer_entry['price']:.2f}")
-    print(f"ABV: {beer_entry['abv']}%")
-    print(f"Rating: {rating_result}")
+    print(f"ABV: {beer_entry['abv']:.1f}%")
+    print(f"Rating: {rating_result}")   
+
+# --- Datetime module ---        
+    current_time = datetime.datetime.now()
+
+# --- Store Datetime ---
+    timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
+    
+# --- Log entry ---
+    log_entry = "*" * 50 + "\n"
+    log_entry += f"BEER ENTRY {entry_id}\n"
+    log_entry += f"Timestamp: {timestamp}\n"
+    log_entry += f"User: {name}\n"
+    log_entry += f"Location: {location}\n"
+    log_entry += f"Beer: {beer_entry['beer_name']}\n"
+    log_entry += f"Brewery: {beer_entry['brewery']}\n"
+    log_entry += f"Price: ${beer_entry['price']:.2f}\n"
+    log_entry += f"ABV: {beer_entry['abv']:.1f}%\n"
+    log_entry += f"Style: {beer_entry['style']}\n"
+    log_entry += f"Strength: {beer_entry['strength']}\n"
+    log_entry += f"Country: {beer_entry['country']}\n"
+    log_entry += f"Rating: {beer_entry['rating']}\n"
+    log_entry += "*" * 50 + "\n"
+    log_entry += "\n"
+
+# --- With open and beer_log ---         
+    with open(BEER_LOG, "a") as file:
+        file.write(log_entry)
+
+#  TODO Entry counter needs to be persistent           
+    entry_id += 1
+    print("Your beer entry has been saved.")
 
 def main():
     # 1. Identity Phase
