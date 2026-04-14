@@ -14,6 +14,7 @@ BEER_FILE = "beer_file.txt"
 DATA_FILE = "entry_history.txt"
 HUMAN_REPORT = "human_report.txt"
 
+# --- TODO replace location with 'where purchased' more relevant than city/state.
 #  --- Asks for user's name and location ---
 def get_user_info():
     name = input("Enter your name: ").strip().title()
@@ -73,7 +74,9 @@ def collect_beer_data(beer_dictionary, rating=0):
         print(f"{index}. {country}")
     country_choice = int(input("Enter country number: "))
     country = countries[country_choice - 1]
-    
+
+# TODO add "Tasting Notes" section
+
 # --- Rating ---
     while True:
         user_rating = input("Rate beer 1-5 or press 'ENTER' to skip: ").strip()
@@ -84,7 +87,8 @@ def collect_beer_data(beer_dictionary, rating=0):
             break
         else:
             print("Invalid selection. Please enter a rating 1-5.")
-    
+
+
 # --- Dictionary ---
     return {
         "beer_name": beer_name,
@@ -133,11 +137,11 @@ def save_data_and_label(name, location, beer_entry, rating_result):
             f"{beer_entry['country']} | "
             f"{rating_result}\n"
         )
-
+# TODO add code to display rating in Human Report as star emoji instead of number
 # --- Human Report File (Write) ---
     with open(HUMAN_REPORT, "w") as file:
         file.write("-" * 50 + "\n")
-        file.write("ROUGH DRAFT ENTRY")
+        file.write("ROUGH DRAUGHT ENTRY")
         file.write("-" * 50 + "\n")
         file.write(f"Timestamp: {timestamp}\n")
         file.write(f"User: {name}\n")
