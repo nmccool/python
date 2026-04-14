@@ -1,0 +1,4 @@
+Brands: Cordoba, ESP, Fender, Gibson, Guild, Jackson, Martin, Music Man
+Types: Acoustic (Classical), Acoustic (Flamenco), Acoustic (Dreadnought), Electric (Hollow Body), Electric (Semi-Hollow), Electric (Solid Body)
+Woods: Alder, Cedar, Maple, Mahogany, Poplar, Rosewood, Spruce 
+Price Range: Budget/Entry Level, Mid Range, Premium, Custom Shop 
