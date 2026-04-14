@@ -1,0 +1,3 @@
+Styles: IPA, Lager, Pilsner, Porter, Stout, Wheat, Belgian / Farmhouse (Saison | Dubbel | Tripel), Sour, Barleywine, Other
+Strengths: Session, Standard, Imperial
+Countries: United States, Germany, Belgium,United Kingdom, Ireland, Canada, Mexico, Other
