@@ -1,0 +1,13 @@
+ROUGH DRAUGHT REPORT
+----------------------------------------
+Timestamp: 2026-04-13 23:57:15
+User: Neal
+Location: Woodstock, Il
+Beer: Smoked Porter W/ Vanilla Bean
+Brewery: Stone
+Price: $12.99
+ABV: 5.9%
+Style: Porter
+Strength: Standard (5.0% - 7.9%)
+Country: United States
+Rating: 3

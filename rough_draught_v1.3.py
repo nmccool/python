@@ -103,7 +103,6 @@ def calculate_rating(beer_entry):
 
 # --- Saving data ---
 def save_data_and_label(name, location, beer_entry, rating_result):
-    """Prints the beer entry summary."""
     print("\n--- ROUGH DRAUGHT ENTRY ---")
     print(f"User: {name}")
     print(f"Location: {location}")
@@ -134,7 +133,7 @@ def save_data_and_label(name, location, beer_entry, rating_result):
 
 # --- Human Report File (Write) ---
     with open(HUMAN_REPORT, "w") as file:
-        file.write("ROUGH DRAUGHT REPORT\n")
+        file.write("ROUGH DRAFT ENTRY\n")
         file.write("-" * 40 + "\n")
         file.write(f"Timestamp: {timestamp}\n")
         file.write(f"User: {name}\n")
