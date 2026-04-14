@@ -103,7 +103,9 @@ def calculate_rating(beer_entry):
 
 # --- Saving data ---
 def save_data_and_label(name, location, beer_entry, rating_result):
-    print("\n--- ROUGH DRAUGHT ENTRY ---")
+    print("-" * 50)
+    print("ROUGH DRAUGHT ENTRY")
+    print("-" * 50)
     print(f"User: {name}")
     print(f"Location: {location}")
     print(f"Beer: {beer_entry['beer_name']}")
@@ -111,6 +113,7 @@ def save_data_and_label(name, location, beer_entry, rating_result):
     print(f"Price: ${beer_entry['price']:.2f}")
     print(f"ABV: {beer_entry['abv']:.1f}%")
     print(f"Rating: {rating_result}")
+    print("-" * 50)
 
     current_time = datetime.datetime.now()
     timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
@@ -118,23 +121,24 @@ def save_data_and_label(name, location, beer_entry, rating_result):
 # --- Raw Data File (Append) ---
     with open(DATA_FILE, "a") as file:
         file.write(
-            f"{timestamp},"
-            f"{name},"
-            f"{location},"
-            f"{beer_entry['beer_name']},"
-            f"{beer_entry['brewery']},"
-            f"{beer_entry['price']:.2f},"
-            f"{beer_entry['abv']:.1f},"
-            f"{beer_entry['style']},"
-            f"{beer_entry['strength']},"
-            f"{beer_entry['country']},"
+            f"{timestamp} | "
+            f"{name} | "
+            f"{location} | "
+            f"{beer_entry['beer_name']} | "
+            f"{beer_entry['brewery']} | "
+            f"{beer_entry['price']:.2f} | "
+            f"{beer_entry['abv']:.1f} | "
+            f"{beer_entry['style']} | "
+            f"{beer_entry['strength']} | "
+            f"{beer_entry['country']} | "
             f"{rating_result}\n"
         )
 
 # --- Human Report File (Write) ---
     with open(HUMAN_REPORT, "w") as file:
-        file.write("ROUGH DRAFT ENTRY\n")
-        file.write("-" * 40 + "\n")
+        file.write("-" * 50 + "\n")
+        file.write("ROUGH DRAFT ENTRY")
+        file.write("-" * 50 + "\n")
         file.write(f"Timestamp: {timestamp}\n")
         file.write(f"User: {name}\n")
         file.write(f"Location: {location}\n")
@@ -153,7 +157,9 @@ def save_data_and_label(name, location, beer_entry, rating_result):
 def review_entry_history():
     try:
         with open(DATA_FILE, "r") as file:
-            print("\n--- ENTRY HISTORY REVIEW ---")
+            print("-" * 50)
+            print("\nENTRY HISTORY REVIEW")
+            print("-" * 50)
             for line in file:
                 print(line.strip())
     except FileNotFoundError:
